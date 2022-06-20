@@ -1,0 +1,3 @@
+# Concepts Covered
+    - Effects
+    - SideEffects

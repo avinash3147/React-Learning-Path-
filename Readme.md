@@ -49,3 +49,49 @@ This will ensure that update will happen correctly. In previous approach if reac
         using props -> invalid={!isValid}
         in css ->border: 1px solid ${props => (props.invalid ? 'red' : 'black' )};
     ```
+
+### Limitations of JSX
+    - can't return more that one root JSX Element
+    - we can wrap content inside ```<div>``` but it will add unnecesary div's into dom
+  
+### Create Wrapper
+    ```
+        const Wrapper = props => {
+            return props.children;
+        }
+
+        export default Wrapper;
+
+        <Wrapper>...content</Wrapper>
+    ```
+    * We can use ```<React.Fragment></React.Fragment>``` or simply ```<></>```
+
+### React Portals
+
+
+### Refs
+    - gives access to other dom elements
+    - useRef
+    ```
+        const nameInputRef = useRef()
+        const ageInputRef = useRef()
+
+        submitHandler = (event) => {
+            name = nameInputRef.current.value
+
+            // add logic
+
+            nameInputRef.current.value = '' // Not Recomended instead Use useState 
+        }
+
+        <form>
+            <input  type='text' ref={nameInputRef} />
+        </form>
+    ```
+    - ```no need to use state and onChange function```
+    - If we use ``refs`` in components we call them uncontrolled components beacuse react is not managing the state
+
+### useEffect
+    - ```useEffect(() => { ... }, [dependencies])```
+    - 1. Func that should be executed after every component evaluation if specified dependecies changed
+    - 2. functiion only runs if dependencies change
