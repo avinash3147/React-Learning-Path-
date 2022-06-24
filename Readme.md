@@ -117,3 +117,9 @@ This will ensure that update will happen correctly. In previous approach if reac
 
 ### useReducer
  - ``` const [state, dispathFun] = useReducer(reducerFun, initialState, initFun)```
+
+### Rules of Hooka:
+    - only call react hooks in react component function or custom hook
+    - should be called on top. don't call inside nested functions or block statements
+
+# Read More about Refs
