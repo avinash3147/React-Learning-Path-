@@ -95,3 +95,9 @@ This will ensure that update will happen correctly. In previous approach if reac
     - ```useEffect(() => { ... }, [dependencies])```
     - 1. Func that should be executed after every component evaluation if specified dependecies changed
     - 2. functiion only runs if dependencies change
+    - ```If no dependencies it will runs only once on first reload
+
+### what is debouncing
+
+### useReducer
+ - ``` const [state, dispathFun] = useReducer(reducerFun, initialState, initFun)```
