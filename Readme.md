@@ -96,6 +96,22 @@ This will ensure that update will happen correctly. In previous approach if reac
     - 1. Func that should be executed after every component evaluation if specified dependecies changed
     - 2. functiion only runs if dependencies change
     - ```If no dependencies it will runs only once on first reload
+    - ```
+    - 
+    - // useEffect(() => {
+        //   const identifier = setTimeout(() => {
+        //     console.log('Checking form validity!');
+        //     setFormIsValid(
+        //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
+        //     );
+        //   }, 500);
+
+        //   return () => {
+        //     console.log('CLEANUP');
+        //     clearTimeout(identifier);
+        //   };
+        // }, [enteredEmail, enteredPassword]);
+  ```
 
 ### what is debouncing
 
